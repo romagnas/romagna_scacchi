@@ -1,4 +1,6 @@
 #include <iostream>
+#define BLACK_PIECE_COLOR "\033[34m" // blu
+#define WHITE_PIECE_COLOR "\033[37m" // bianco
 using namespace std;
 
 /*
@@ -35,14 +37,22 @@ void printBoard()
         cout << 8 - row << "|";
 
         for (int col = 0; col < 8; col++)
-        {
-            if ((row + col) % 2 == 0)
-                cout << "\033[100m";
-            else
-                cout << "\033[40m";
-
-            cout << board[row][col] << " ";
-        }
+		{
+		    // Colori caselle
+		    if ((row + col) % 2 == 0)
+		        cout << "\033[100m"; // chiaro
+		    else
+		        cout << "\033[40m";  // scuro
+		
+		    // Colore pezzi
+		    string piece = board[row][col];
+		    if (piece >= "♚" && piece <= "♟")  // nero
+		        cout << BLACK_PIECE_COLOR;
+		    else if (piece >= "♔" && piece <= "♙") // bianco
+		        cout << WHITE_PIECE_COLOR;
+		
+		    cout << piece << " ";
+		}
 
         cout << "\033[0m\n";
     }
@@ -262,4 +272,5 @@ int main()
             turno++;
     }
 }
+
 
