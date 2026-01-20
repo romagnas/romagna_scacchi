@@ -5,6 +5,8 @@ questo script è fatto a scopo didattico.
 
 2- inserisci le mosse che intendi fare con le pedine, per esempio: e2(la posizione di partenza)e4(la posizione di arrivo).
 
+3- per uscire dal gioco scrivere "quit" o "q"
+
 gioca con un amico o con chi vuoi!
 
 !!ATTENZIONE!!
