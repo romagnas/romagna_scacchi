@@ -157,6 +157,13 @@ bool makeMove()
     cin >> move;
     string scelta;
 
+	// Opzione uscita
+    if (move == "q" || move == "quit")
+    {
+        cout << "Uscita dal gioco.\n";
+        exit(0);
+    }
+
     system("clear");
 
     int fromCol = move[0] - 'a';
@@ -255,3 +262,4 @@ int main()
             turno++;
     }
 }
+
